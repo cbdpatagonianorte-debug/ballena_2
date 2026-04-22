@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Franca, la Ballena - Explore the Ocean</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#233746",
+                    "on-primary-container": "#009fb1",
+                    "primary-fixed": "#9cf0ff",
+                    "outline": "#8d9198",
+                    "secondary-container": "#4f4631",
+                    "surface-container-low": "#081d2c",
+                    "on-surface-variant": "#c3c7ce",
+                    "surface-container-high": "#182c3b",
+                    "surface-container-lowest": "#00101c",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#42474d",
+                    "on-background": "#d0e5f9",
+                    "surface-tint": "#00daf3",
+                    "inverse-on-surface": "#1f3241",
+                    "on-secondary-fixed": "#221b0a",
+                    "inverse-primary": "#006875",
+                    "secondary-fixed": "#f0e1c5",
+                    "inverse-surface": "#d0e5f9",
+                    "background": "#011523",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#004f58",
+                    "secondary": "#d3c5aa",
+                    "surface-variant": "#233746",
+                    "secondary-fixed-dim": "#d3c5aa",
+                    "primary": "#00daf3",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#410007",
+                    "surface": "#011523",
+                    "tertiary-container": "#5a010e",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#001f24",
+                    "tertiary-fixed-dim": "#ffb3b1",
+                    "on-secondary": "#382f1d",
+                    "on-secondary-container": "#c1b49a",
+                    "primary-container": "#002e34",
+                    "on-tertiary": "#650914",
+                    "on-surface": "#d0e5f9",
+                    "on-tertiary-container": "#e46a6b",
+                    "on-tertiary-fixed-variant": "#842228",
+                    "surface-dim": "#011523",
+                    "surface-container": "#0c2130",
+                    "tertiary-fixed": "#ffdad8",
+                    "on-primary": "#00363d",
+                    "surface-bright": "#283b4b",
+                    "tertiary": "#ffb3b1",
+                    "on-secondary-fixed-variant": "#4f4631",
+                    "primary-fixed-dim": "#00daf3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-sm {
+            box-shadow: 0 0 15px rgba(0, 218, 243, 0.3);
+        }
+        .ocean-gradient {
+            background: linear-gradient(155deg, #002e34 0%, #011523 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary min-h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-slate-900/60 backdrop-blur-2xl shadow-[0_20px_40px_rgba(0,218,243,0.08)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img alt="Franca the Whale" class="w-full h-full object-cover" data-alt="Stylized artistic avatar of a southern right whale with bioluminescent patterns and gentle eyes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArOb6w99-fIURy3wVrokSKVNzWkM_vO-rITwgTAo1kN8FZmEPQd3tT-RnZHKC4tuBcYCkc3-2YNN9ZGlD6YBxEHuGTi7YWylvBvOL3gjeDPS5-kSWoiu3kDc3qfSyVY_6l83SiHxIfkMjXF5izARTliB1MOhvTPpg8-GCoEJjY7fNwo-laYafSpiyt6nyeF6GQpElhGEHvmXBlz2_IzisO4ZOLSxMP-s3GVNu4ypIqGZEcFtIyVLZb7U-KDeM9ZeCzaYZpeU_tPe0"/>
+</div>
+<h1 class="text-xl font-black text-cyan-400 tracking-tight font-headline">Franca, la Ballena</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-cyan-400/10 transition-colors text-cyan-400 active:scale-95 duration-200">
+<span class="material-symbols-outlined">waves</span>
+</button>
+</header>
+<!-- Main Map Canvas -->
+<main class="relative w-full h-screen ocean-gradient pt-20 pb-24">
+<!-- Map Background -->
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="Dark dramatic aerial view of deep blue ocean waters meeting a rugged coastline with bioluminescent particles floating in the water" data-location="Patagonia Coastline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYO3gOeVaIuziuKfLm80crnbiztDmjOvzjf_yj0-nEsEz496H0keJvs-94XdCvqReite-78swSmn5e-U7viu3M1efu-kLkTwN9I0BfIo03pJFUjWu-nh6wLAhd13xACYAzas2igv2OxP38bz3Hwg9hz7o--ruYB7S0PN15N3Gy0WT8kN2v88lx5ZKF4GJ_y4KmThW4Ng5TKymcXZRvWwi_uMYGke5MDOwyWqOV-GGeJomSaRhrgGedsP8CC8DjuicrcyiEW5ZWXZ4"/>
+</div>
+<!-- Migration Path Overlays (SVG) -->
+<svg class="absolute inset-0 w-full h-full z-10 pointer-events-none" preserveaspectratio="none" viewbox="0 0 1000 1000">
+<path class="opacity-60" d="M100,800 Q300,600 500,700 T900,400" fill="none" stroke="url(#glowGradient)" stroke-dasharray="12,12" stroke-width="4"></path>
+<defs>
+<lineargradient id="glowGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#00daf3;stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:#00daf3;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#ffb3b1;stop-opacity:0.5"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Interactive Points & Tooltips -->
+<!-- Point 1: Active Focus -->
+<div class="absolute top-[45%] left-[35%] z-20 group">
+<div class="relative">
+<div class="w-6 h-6 bg-primary rounded-full animate-pulse blur-sm absolute inset-0"></div>
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center cursor-pointer border-2 border-on-background/20">
+<span class="material-symbols-outlined text-[14px] text-on-primary font-bold">location_on</span>
+</div>
+<!-- Tooltip -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-surface-container/90 backdrop-blur-xl p-4 rounded-lg border border-primary/20 shadow-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary font-label">Active Sighting</span>
+<div class="w-2 h-2 rounded-full bg-primary animate-ping"></div>
+</div>
+<h3 class="text-lg font-bold font-headline text-on-surface mb-1">Golfo Nuevo</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Franca was spotted here 2 hours ago with her calf. Moving North-East at 4 knots.</p>
+</div>
+</div>
+</div>
+<!-- Point 2 -->
+<div class="absolute top-[60%] left-[65%] z-20 group">
+<div class="relative">
+<div class="w-4 h-4 bg-tertiary rounded-full flex items-center justify-center cursor-pointer border-2 border-on-background/10 hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-[10px] text-on-tertiary font-bold">water_drop</span>
+</div>
+<!-- Tooltip -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-56 bg-surface-container/90 backdrop-blur-xl p-4 rounded-lg border border-tertiary/20 shadow-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="text-sm font-bold font-headline text-on-surface mb-1">Plankton Bloom</h3>
+<p class="text-xs text-on-surface-variant">High nutrient density detected. Primary feeding ground for migration season.</p>
+</div>
+</div>
+</div>
+<!-- Floating UI Overlays -->
+<div class="absolute top-24 right-8 z-30 flex flex-col gap-4">
+<div class="bg-surface-container-low/40 backdrop-blur-md p-4 rounded-lg border border-outline-variant/10 w-48 shadow-lg">
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary mb-3 block font-label">Ocean Depth</span>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-cyan-600 w-3/4"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] text-on-surface-variant font-bold">450m</span>
+<span class="text-[10px] text-on-surface-variant font-bold">Submerged</span>
+</div>
+</div>
+<div class="bg-surface-container-low/40 backdrop-blur-md p-4 rounded-lg border border-outline-variant/10 w-48 shadow-lg">
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary mb-3 block font-label">Hydrophone</span>
+<div class="flex items-center gap-2">
+<div class="flex gap-0.5 items-end h-6">
+<div class="w-1 bg-primary h-2 rounded-full"></div>
+<div class="w-1 bg-primary h-5 rounded-full"></div>
+<div class="w-1 bg-primary h-3 rounded-full"></div>
+<div class="w-1 bg-primary h-6 rounded-full"></div>
+<div class="w-1 bg-primary h-2 rounded-full"></div>
+</div>
+<span class="text-xs font-bold text-on-surface ml-2">Songs detected</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Hero Content Overlay -->
+<div class="absolute bottom-32 left-8 z-30 max-w-sm">
+<h2 class="text-4xl font-extrabold font-headline text-on-surface leading-tight tracking-tight mb-4">
+                The Blue <br/> <span class="text-primary">Sanctuary</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6 font-light">
+                Follow Franca's journey through the deep currents of the Atlantic. Every pulse represents a song, every light a memory.
+            </p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold text-sm tracking-wide hover:shadow-[0_0_20px_rgba(0,218,243,0.4)] transition-all flex items-center gap-2 group">
+                Join the Migration
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-slate-900/80 backdrop-blur-3xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,218,243,0.05)]">
+<!-- Map - Active -->
+<a class="flex flex-col items-center justify-center bg-cyan-400/20 text-cyan-300 rounded-full px-5 py-2 glow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1 font-label">Map</span>
+</a>
+<!-- Songs -->
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-cyan-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1 font-label">Songs</span>
+</a>
+<!-- Gallery -->
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-cyan-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1 font-label">Gallery</span>
+</a>
+<!-- Speak -->
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-cyan-200 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1 font-label">Speak</span>
+</a>
+</nav>
+<!-- Floating Action Button - Contextual -->
+<div class="fixed bottom-28 right-6 z-50">
+<button class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all glow-sm">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</body></html>

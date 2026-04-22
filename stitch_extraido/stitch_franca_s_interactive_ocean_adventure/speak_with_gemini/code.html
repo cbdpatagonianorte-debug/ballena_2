@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Franca, la Ballena - Speak</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#233746",
+                    "on-primary-container": "#009fb1",
+                    "primary-fixed": "#9cf0ff",
+                    "outline": "#8d9198",
+                    "secondary-container": "#4f4631",
+                    "surface-container-low": "#081d2c",
+                    "on-surface-variant": "#c3c7ce",
+                    "surface-container-high": "#182c3b",
+                    "surface-container-lowest": "#00101c",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#42474d",
+                    "on-background": "#d0e5f9",
+                    "surface-tint": "#00daf3",
+                    "inverse-on-surface": "#1f3241",
+                    "on-secondary-fixed": "#221b0a",
+                    "inverse-primary": "#006875",
+                    "secondary-fixed": "#f0e1c5",
+                    "inverse-surface": "#d0e5f9",
+                    "background": "#011523",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#004f58",
+                    "secondary": "#d3c5aa",
+                    "surface-variant": "#233746",
+                    "secondary-fixed-dim": "#d3c5aa",
+                    "primary": "#00daf3",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#410007",
+                    "surface": "#011523",
+                    "tertiary-container": "#5a010e",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#001f24",
+                    "tertiary-fixed-dim": "#ffb3b1",
+                    "on-secondary": "#382f1d",
+                    "on-secondary-container": "#c1b49a",
+                    "primary-container": "#002e34",
+                    "on-tertiary": "#650914",
+                    "on-surface": "#d0e5f9",
+                    "on-tertiary-container": "#e46a6b",
+                    "on-tertiary-fixed-variant": "#842228",
+                    "surface-dim": "#011523",
+                    "surface-container": "#0c2130",
+                    "tertiary-fixed": "#ffdad8",
+                    "on-primary": "#00363d",
+                    "surface-bright": "#283b4b",
+                    "tertiary": "#ffb3b1",
+                    "on-secondary-fixed-variant": "#4f4631",
+                    "primary-fixed-dim": "#00daf3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-sm {
+            box-shadow: 0 0 15px rgba(0, 218, 243, 0.3);
+        }
+        .ocean-bg {
+            background: linear-gradient(155deg, #002e34 0%, #011523 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body ocean-bg min-h-screen selection:bg-primary/30 selection:text-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-slate-900/60 backdrop-blur-2xl shadow-[0_20px_40px_rgba(0,218,243,0.08)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="Franca the Whale" class="w-full h-full object-cover" data-alt="close up of a majestic southern right whale skin texture with sea spray in cinematic deep blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJIICOgpVNxVfrNzK5nowzOQODHfEdsS32t1XQE6VC7jg5w8dgcpQ6vkuTFRdavtBiawoh5K1omJSqNZSB25xcXgQZCAQSZawxw1UChUijsL2BVpkjvaiAlXe1DQi8R-xQQkA5Ikc2vPmCLQx-CpB4Mk6gEH0Tx2wwvfASuEFabON3rCUf7dotemsSR1K8s-Z5ojJ9ZYqlmQlmCUGeh7GBgOPXuS5ECJncNDE8Ta1gBen94oQFEhIJ_WWUtM8wJTLz5LpruJF0-Yo"/>
+</div>
+<h1 class="text-xl font-black text-cyan-400 tracking-tight font-headline">Franca, la Ballena</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-cyan-400" data-icon="waves">waves</span>
+</div>
+</header>
+<!-- Main Chat Canvas -->
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto flex flex-col min-h-screen">
+<!-- Floating Visual Aid -->
+<div class="absolute top-20 right-0 w-64 h-64 opacity-20 pointer-events-none overflow-hidden blur-3xl">
+<div class="absolute inset-0 bg-primary rounded-full animate-pulse"></div>
+</div>
+<!-- Chat History -->
+<div class="flex-1 flex flex-col gap-8 mb-8">
+<!-- AI Response (Personified Whale) -->
+<div class="flex flex-col gap-4 max-w-[85%] self-start group">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] uppercase tracking-widest font-bold font-label text-primary">Franca Intelligence</span>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-xl p-6 rounded-lg rounded-tl-none border-l-2 border-primary/40 shadow-lg">
+<p class="text-on-background text-lg leading-relaxed">
+                        The currents are shifting south today. I can feel the vibrations of a distant storm through the water. Do you wish to hear the song of the deep or understand the migration paths?
+                    </p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-col gap-4 max-w-[80%] self-end">
+<div class="bg-primary/10 backdrop-blur-md p-5 rounded-lg rounded-tr-none border border-primary/20">
+<p class="text-primary-fixed font-medium">Tell me about the songs. How do you communicate across the entire ocean?</p>
+</div>
+<div class="flex justify-end items-center gap-2">
+<span class="text-[10px] uppercase tracking-widest font-bold font-label text-slate-500">Sent · 10:42 AM</span>
+</div>
+</div>
+<!-- AI Response (Personified Whale) -->
+<div class="flex flex-col gap-4 max-w-[90%] self-start">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] uppercase tracking-widest font-bold font-label text-primary">Franca Intelligence</span>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-xl p-6 rounded-lg rounded-tl-none border-l-2 border-primary/40 shadow-lg relative overflow-hidden">
+<!-- Glassy Highlight -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+<p class="text-on-background text-lg leading-relaxed mb-4">
+                        Sound travels four times faster in water than in air. We use the **SOFAR channel**, a deep-sea horizontal layer of water where sound speed is at its minimum. My songs can travel thousands of kilometers here.
+                    </p>
+<!-- Multimedia Card inside Chat -->
+<div class="mt-4 p-4 rounded-md bg-surface-container-highest/50 border border-outline-variant/20 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="graphic_eq">graphic_eq</span>
+</div>
+<div class="flex-1">
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-gradient-to-r from-primary to-tertiary"></div>
+</div>
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2 block">Low Frequency Pulse Analysis</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Input Area (Fixed above bottom nav) -->
+<div class="sticky bottom-24 w-full">
+<div class="bg-surface-container-high/80 backdrop-blur-2xl rounded-xl p-4 shadow-2xl border border-primary/10 flex items-center gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<div class="flex-1">
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-slate-500 font-body" placeholder="Speak to the deep..." type="text"/>
+</div>
+<!-- Microphone Interaction -->
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,218,243,0.4)] hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="mic" data-weight="fill" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-slate-900/80 backdrop-blur-3xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,218,243,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-cyan-200 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-cyan-200 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="music_note">music_note</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Songs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-cyan-200 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="palette">palette</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Gallery</span>
+</a>
+<!-- ACTIVE TAB: Speak -->
+<a class="flex flex-col items-center justify-center bg-cyan-400/20 text-cyan-300 rounded-full px-5 py-2 glow-sm" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Speak</span>
+</a>
+</nav>
+<!-- Background Decorative Elements -->
+<div class="fixed top-1/4 -left-20 w-96 h-96 bg-cyan-900/10 rounded-full blur-[120px] -z-10"></div>
+<div class="fixed bottom-1/4 -right-20 w-80 h-80 bg-cyan-800/10 rounded-full blur-[100px] -z-10"></div>
+</body></html>

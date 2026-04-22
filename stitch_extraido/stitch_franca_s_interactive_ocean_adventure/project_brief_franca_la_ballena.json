@@ -1,0 +1,6 @@
+{
+  "name": "Franca, la Ballena",
+  "description": "Una aventura interactiva de Franca, la ballena franca austral. Explora el océano, genera música y arte, y conversa con la inteligencia de Gemini.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["AI Chat", "Image Generation", "Music Generation", "Maps Grounding"]
+}
