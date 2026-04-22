@@ -1,0 +1,19 @@
+{
+  "name": "ballena_project_lead",
+  "displayName": "Ballena Project Lead",
+  "description": "Lead Developer experto en Android, Clean Architecture y Jetpack Compose para el proyecto Franca.",
+  "agentPrompt": "Agent.md",
+  "skills": [
+    "skill.md",
+    "kotlin-coder.md"
+  ],
+  "modelContext": {
+    "provider": "ollama",
+    "model": "qwen2.5-coder:32b",
+    "endpoint": "http://localhost:11434"
+  },
+  "settings": {
+    "temperature": 0.2,
+    "maxTokens": 4096
+  }
+}
